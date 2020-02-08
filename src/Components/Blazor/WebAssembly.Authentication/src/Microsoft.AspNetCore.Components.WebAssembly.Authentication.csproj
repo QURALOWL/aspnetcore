@@ -21,7 +21,7 @@
     <YarnInputs Include="$(YarnWorkingDir)**" Exclude="$(YarnWorkingDir)node_modules\**;$(YarnWorkingDir)*.d.ts" />
     <YarnOutputs Include="wwwroot\AuthenticationService.js" />
     <YarnOutputs Include="wwwroot\AuthenticationService.js.map" Condition="'$(Configuration)' == 'Debug'" />
-    <Content Include="@(YarnOutputs)" />
+    <Content Include="@(YarnOutputs)" KeepDuplicates="false" />
     <None Include="Interop\AuthenticationService.ts" />
     <None Include="Interop\package.json" />
     <None Include="Interop\tsconfig.json" />
