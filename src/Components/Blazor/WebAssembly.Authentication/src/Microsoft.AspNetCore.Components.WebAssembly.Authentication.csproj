@@ -47,7 +47,7 @@
     <Yarn Command="run build:release" WorkingDirectory="$(YarnWorkingDir)" Condition="'$(Configuration)' == 'Release'" />
     <Yarn Command="run build:debug" WorkingDirectory="$(YarnWorkingDir)" Condition="'$(Configuration)' == 'Debug'" />
     <ItemGroup>
-      <Content Include="$(YarnOutputPattern)" />
+      <Content Include="$(YarnOutputPattern)" KeepDuplicates="false" />
     </ItemGroup>
   </Target>
 
